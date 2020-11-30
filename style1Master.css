@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@keyframes transitionIn1{
+    from{
+        transform: translateY(-70%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes transitionIn2{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: ghostwhite;
+    font-family: 'Nunito Sans', sans-serif;
+    animation: transitionIn2 1s;
+}
+
+button, a{
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: rgb(59, 59, 59);
+    cursor: pointer;
+}
+
+p{
+    font-size: 20px;
+    color: rgb(59, 59, 59);
+}
+
+h2{
+    font-size: 35px;
+    color: rgb(59, 59, 59);
+}
+
+h3{
+    font-size: 28px;
+    color: rgb(59, 59, 59);
+}
+
+.parent-two-scroll-down{
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.parent-two-scroll-down a::before{
+    content: "";
+    width: 20px;
+    height: 100%;
+    background-image: url(img/arrow-down-icon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: translateX(50px);
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.parent-two-scroll-down a:hover::before{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+.parent-two-scroll-down a::after{
+    content: "";
+    width: 20px;
+    height: 100%;
+    background-image: url(img/arrow-down-icon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: translateX(-50px) scaleX(-1);
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.parent-two-scroll-down a:hover::after{
+    opacity: 1;
+    transform: translateX(0) scaleX(-1);
+    transition: all 0.5s;
+}
+
+.wrapper-bottom{
+    padding: 2%;
+    height: fit-content;
+    background-color: rgb(151, 191, 207);
+    margin-top: 100px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    text-align: center;
+    box-shadow: 10px 10px 30px grey;
+}
+
+.bottom-button-trsh{
+    background-color: rgb(205, 224, 231);
+    width: 120px;
+    height: 40px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.bottom-button-trsh:hover{
+    transform: translateY(-60%);
+}
+
+.bottom-button-sources{
+    background-color: rgb(205, 224, 231);
+    width: 120px;
+    height: 40px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.bottom-button-sources:hover{
+    transform: translateY(-60%);
+}
+
+.scroll-to-top{
+    width: 170px;
+    height: 40px;
+    background-color: rgb(205, 224, 231);
+    background-image: url(img/arrow-up-icon.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    border: 1px solid black;
+    border-radius: 25px;
+    position: fixed;
+    right: -125px;
+    bottom: 5px;
+    transition: all ease-in-out 0.5s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.scroll-to-top p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroll-to-top:hover{
+    right: 0;
+}
+
+@media screen and (max-width:1050px){
+    .wrapper-bottom{
+        display: block;
+    }
+
+    .bottom-child-two{
+        margin-top: 60px;
+    }
+
+    .bottom-button-trsh{
+        position: absolute;
+        top: 20%;
+        left: 20%;
+    }
+
+    .bottom-button-sources{
+        position: absolute;
+        top: 20%;
+        right: 20%;
+    }
+}

@@ -1,0 +1,197 @@
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(151, 191, 207);
+}
+
+.title{
+    text-align: center;
+    position: relative;
+    left: 15%;
+    top: 15px;
+    width: fit-content;
+    letter-spacing: 4px;
+    font-weight: bolder;
+}
+
+.title a{
+    text-decoration: none;
+}
+
+.title a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgb(38, 44, 46);
+    position: relative;
+    right: 25%;
+    bottom: 5px;
+    transform: translateX(90px);
+    transition: all 0.5s;
+}
+
+.title a:hover::after{
+    width: 150%;
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+.title h1{
+    font-size: 40px;
+}
+
+.navlinks{
+    position: absolute;
+    right: 5%;
+    top: 0;
+    list-style: none;
+    width: 500px;
+    transition: all ease 1s;
+}
+
+.navlinks button{
+    width: 100px;
+    height: 80px;
+    border: none;
+    transition: all ease 0.5s;
+}
+
+.navlinks button::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgb(38, 44, 46);
+    position: relative;
+    left: 10%;
+    transform: translateX(40px);
+    transition: all 0.3s;
+}
+
+.navlinks button:hover::after{
+    width: 80%;
+    transform: translateX(0);
+    transition: all 0.3s;
+}
+
+.navlinks button:hover{
+    background-color: rgb(125, 160, 173);
+    height: 85px;
+    transition: all ease 0.5s;
+}
+
+.navlinks img{
+    width: 60px;
+}
+
+.navlinks p{
+    font-size: 20px;
+}
+
+.home-a button{
+    position: absolute;
+    right: 400px;
+    top: 0;
+}
+
+.about-a button{
+    position: absolute;
+    right: 300px;
+    top: 0;
+}
+
+.solution-a button{
+    position: absolute;
+    right: 200px;
+    top: 0;
+}
+
+.app-a button{
+    position: absolute;
+    right: 100px;
+    top: 0;
+}
+
+.burger{
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 10%;
+    top: 25px;
+    transition: all ease 1s;
+    transform: translateX(2000%);
+}
+
+.burger div{
+    width: 27px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: rgb(38, 44, 46);
+    margin: 5px;
+}
+
+.burger:hover{
+    background-color: rgb(125, 160, 173);
+}
+
+.close-menu{
+    display: none;
+}
+
+@media screen and (max-width:1050px){
+    nav{
+        text-align: center;
+        position: fixed;
+    }
+    
+    .burger{
+        transform: translateX(0);
+    }
+
+    .close-menu{
+        display: block;
+    }
+
+    .navlinks{
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(151, 191, 207);
+        transform: translateX(100%);
+    }
+
+    .navlinks button{
+        width: 100%;
+        height: 20vh;
+        position: static;
+    }
+
+    .navlinks button::after{
+        left: 44%;
+    }
+    
+    .navlinks button:hover::after{
+        width: 20%;
+        transform: translateX(-21%);
+    }
+
+    .navlinks button:hover{
+        height: 20vh;
+    }
+
+    .burger:focus + .navlinks{
+        transform: translateX(0);
+    }
+
+    .burger:focus{
+        transform: translateX(2000%);
+    }
+}

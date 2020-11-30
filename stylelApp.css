@@ -1,0 +1,64 @@
+.wrapper-one, .wrapper-two, .wrapper-three, .wrapper-four, .wrapper-five{
+    padding-top: 80px;
+    width: 100%;
+    height: 100vh;
+    min-height: min-content;
+    position: relative;
+    text-align: center;
+}
+
+.wrapper-one-parent-one, .wrapper-two-parent-one, .wrapper-three-parent-one, .wrapper-four-parent-one, .wrapper-five-parent-one{
+    background-color: rgb(205, 224, 231);
+    padding: 2% 0 2% 0;
+    height: 80%;
+    min-height: fit-content;
+    box-shadow: 10px 10px 30px grey;
+    position: relative;
+    top: 8%;
+}
+
+.wrapper-one-parent-grid-box, .wrapper-two-parent-grid-box, .wrapper-three-parent-grid-box, .wrapper-four-parent-grid-box, .wrapper-five-parent-grid-box{
+    margin-top: 2%;
+    height: 80%;
+    position: relative;
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.wrapper-one-parent-one-child-one{
+    position: relative;
+}
+
+.wrapper-one-parent-one-child-two, .wrapper-two-parent-one-child-two, .wrapper-three-parent-one-child-two, .wrapper-four-parent-one-child-two, .wrapper-five-parent-one-child-two{
+    min-height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.wrapper-one-parent-one-child-two{
+    background-image: url(img/login-app-img.png);
+}
+.wrapper-two-parent-one-child-two{
+    background-image: url(img/menu-app-img.png);
+}
+.wrapper-three-parent-one-child-two{
+    background-image: url(img/map-app-img.png);
+}
+.wrapper-four-parent-one-child-two{
+    background-image: url(img/watch-app-img.png);
+}
+
+.text-box-align-center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width:1050px){
+    
+}
+
+@media screen and (max-width:560px){
+    
+}
