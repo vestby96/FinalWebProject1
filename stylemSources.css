@@ -46,12 +46,8 @@
     position: relative;
 }
 
-.source-text{
-    
-}
-
 .image-sources img{
-    height: 200px;
+    height: 100px;
     position: absolute;
     right: 0;
     top: 50%;
