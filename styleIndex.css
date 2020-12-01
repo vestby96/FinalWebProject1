@@ -113,6 +113,10 @@
     background-repeat: no-repeat;
 }
 
+.child-one-img p{
+    display: none;
+}
+
 .wrapper-two-parent-one-child-two{
     height: 100%;
     width: 50%;
