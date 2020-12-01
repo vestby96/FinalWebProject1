@@ -14,20 +14,24 @@
     min-height: fit-content;
     box-shadow: 10px 10px 30px grey;
     position: relative;
-    top: 8%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .wrapper-one-parent-grid-box, .wrapper-two-parent-grid-box, .wrapper-three-parent-grid-box, .wrapper-four-parent-grid-box, .wrapper-five-parent-grid-box{
     margin-top: 2%;
-    height: 80%;
+    height: 100%;
     position: relative;
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-.wrapper-one-parent-one-child-one{
+.wrapper-one-parent-one-child-one, .wrapper-two-parent-one-child-one, .wrapper-three-parent-one-child-one, .wrapper-four-parent-one-child-one, .wrapper-five-parent-one-child-one{
+    padding: 0 2% 0 2%;
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .wrapper-one-parent-one-child-two, .wrapper-two-parent-one-child-two, .wrapper-three-parent-one-child-two, .wrapper-four-parent-one-child-two, .wrapper-five-parent-one-child-two{
@@ -35,6 +39,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .wrapper-one-parent-one-child-two{
     background-image: url(img/login-app-img.png);
@@ -48,6 +55,9 @@
 .wrapper-four-parent-one-child-two{
     background-image: url(img/watch-app-img.png);
 }
+.wrapper-five-parent-one-child-two{
+    background-image: url(img/mobile-app-trio-image.png);
+}
 
 .text-box-align-center{
     position: relative;
@@ -55,10 +65,14 @@
     transform: translateY(-50%);
 }
 
-@media screen and (max-width:1050px){
-    
+@media screen and (max-width:820px){
+    .wrapper-five-parent-one-child-two{
+        display: none;
+    }
 }
 
 @media screen and (max-width:560px){
-    
+    .wrapper-one, .wrapper-two, .wrapper-three, .wrapper-four, .wrapper-five{
+        height: 800px;
+    }
 }

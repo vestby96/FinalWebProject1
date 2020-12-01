@@ -21,13 +21,14 @@
     margin-top: 2%;
     height: 80%;
     position: relative;
-    display: grid;
-    grid-auto-rows: min-content;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .wrapper-one-parent-one-child-one{
-    position: relative;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
     min-height: 350px;
 }
 
@@ -64,6 +65,12 @@
 }
 
 .wrapper-one-parent-one-child-two{
+    padding: 0 2% 0 2%;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
     min-height: fit-content;
 }
 
@@ -82,41 +89,106 @@
     top: 3%;
 }
 
+.wrapper-two-parent-one h2{
+    height: 10%;
+}
+
+.wrapper-two-parent-one p{
+    padding: 0 4%;
+    height: 10%;
+}
+
 .wrapper-two-parent-grid-box{
     margin-top: 2%;
     height: 80%;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-}
-
-.wrapper-two-parent-one-child-one{
-    padding: 2px 2%;
 }
 
 .child-one-img{
-    height: 80%;
-    width: 100%;
+    height: 100%;
+    width: 50%;
     background-image: url(img/UN-circle-logo.png);
     background-size: 35%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
+.wrapper-two-parent-one-child-two{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .wrapper-two-parent-one-child-two iframe{
     width: 500px;
     height: 300px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     border: 2px solid black;
     border-radius: 15px;
 }
 
+.wrapper-two-parent-one-child-two a{
+    text-decoration: underline;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
 @media screen and (max-width:1050px){
-    .child-one-img{
+    .parent-two-scroll-down{
         display: none;
+    }
+
+    .wrapper-two-parent-one-child-one{
+        width: 30%;
+    }
+
+    .child-one-img{
+        background-position: left;
+    }
+
+    .wrapper-two-parent-one-child-two{
+        width: 70%;
     }
 }
 
-@media screen and (max-width:560px){
+@media screen and (max-width:600px){
+    .wrapper-one, .wrapper-two{
+        height: 900px;
+    }
+    
+    .wrapper-one-parent-one-child-one{
+        height: 50%;
+        width: 100%;
+        position: relative;
+    }
+    
+    .wrapper-one-parent-one-child-two{
+        width: 100%;
+        height: 50%;
+        position: relative;
+    }
+    
+    .wrapper-two-parent-one-child-one{
+        display: none;
+    }
+
+    .child-one-img{
+        display: none;
+    }
+    
+    .wrapper-two-parent-one-child-two{
+        width: 100%;
+        height: 50%;
+        position: relative;
+    }
+
+    
     .wrapper-two-parent-one-child-two iframe{
         width: 325px;
         height: 175px;

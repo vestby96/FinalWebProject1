@@ -1,48 +1,195 @@
 .wrapper-one{
     padding-top: 80px;
     width: 100%;
-    height: 100vh;
-    min-height: min-content;
     position: relative;
     text-align: center;
 }
 
-.wrapper-one-parent-one{
+.top{
+    margin-top: 50px;
+    padding: 10%;
+    height: 300px;
     background-color: rgb(205, 224, 231);
-    padding: 2% 0 2% 0;
-    height: 80%;
-    min-height: fit-content;
-    box-shadow: 10px 10px 30px grey;
-    position: relative;
-    top: 8%;
 }
 
-.wrapper-one-parent-grid-box{
-    margin-top: 2%;
-    height: 80%;
-    position: relative;
-    display: grid;
-    grid-auto-rows: min-content;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-}
-
-.wrapper-one-parent-one-child-one{
-    position: relative;
-    min-height: 350px;
-}
-
-.wrapper-one-parent-one-child-two{
-    min-height: fit-content;
-}
-
-.text-box-align-center{
+.top h3{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
+.wrapper-one-parent-one{
+    margin-top: 50px;
+    width: 100%;
+    height: 1600px;
+    background-color: rgb(244, 248, 250);
+    padding: 2% 0 2% 0;
+    box-shadow: 10px 10px 30px grey;
+    position: relative;
+}
+
+.wrapper-one-parent-one h2{
+    height: 5%;
+}
+
+.flow-chart-pipe{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(img/flow-chart-pipe.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.wrapper-one-parent-grid-box{
+    height: 93%;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.qj-part-one{
+    height: 22%;
+    position: relative;
+}
+
+.qj-part-one-child-one{
+    height: 100%;
+    width: 25%;
+    background-image: url(img/flow-chart-digger.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.qj-part-one-child-two{
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: left;
+}
+
+.qj-part-two{
+    height: 22%;
+    position: relative;
+}
+
+.qj-part-two-child-one{
+    height: 100%;
+    width: 25%;
+    background-image: url(img/flow-chart-user.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.qj-part-two-child-two{
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: left;
+}
+
+.qj-part-two-child-two p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.qj-part-three{
+    height: 22%;
+    position: relative;
+}
+
+.qj-part-three-child-one{
+    height: 300%;
+    width: 27%;
+    position: absolute;
+    top: 35%;
+    background-image: url(img/flow-chart-factory.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.qj-part-three-child-two{
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: left;
+}
+
+.qj-part-three-child-two p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.qj-part-four{
+    height: 22%;
+    position: relative;
+}
+
+.qj-part-four-child-two{
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: left;
+}
+
+.qj-part-four-child-two p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.qj-part-five{
+    height: 22%;
+    position: relative;
+}
+
+.qj-part-five-child-two{
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: left;
+}
+
+.qj-part-five-child-two p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
 @media screen and (max-width:1050px){
-    
+    .qj-part-one-child-one, .qj-part-two-child-one, .qj-part-three-child-one{
+        display: none;
+    }
+
+    .qj-part-one-child-two, .qj-part-two-child-two, .qj-part-three-child-two, .qj-part-four-child-two, .qj-part-five-child-two{
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    .qj-part-five-child-two{
+        border: none;
+    }
 }
 
 @media screen and (max-width:560px){

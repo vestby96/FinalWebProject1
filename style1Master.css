@@ -114,15 +114,20 @@ h3{
 }
 
 .wrapper-bottom{
-    padding: 2%;
-    height: fit-content;
+    height: 220px;
     background-color: rgb(151, 191, 207);
     margin-top: 100px;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     text-align: center;
     box-shadow: 10px 10px 30px grey;
+}
+
+.bottom-child-one{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .bottom-button-trsh{
@@ -138,6 +143,30 @@ h3{
 
 .bottom-button-trsh:hover{
     transform: translateY(-60%);
+}
+
+.bottom-child-two{
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+}
+
+.contact-information{
+    width: 100%;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom-child-three{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .bottom-button-sources{
@@ -184,12 +213,20 @@ h3{
 }
 
 @media screen and (max-width:1050px){
-    .wrapper-bottom{
-        display: block;
+    button, a{
+        font-size: 20px;
     }
-
-    .bottom-child-two{
-        margin-top: 60px;
+    
+    p{
+        font-size: 20px;
+    }
+    
+    h2{
+        font-size: 35px;
+    }
+    
+    h3{
+        font-size: 28px;
     }
 
     .bottom-button-trsh{
@@ -198,9 +235,32 @@ h3{
         left: 20%;
     }
 
+    .bottom-child-two{
+        width: 100%;
+        left: 0;
+    }
+
     .bottom-button-sources{
         position: absolute;
         top: 20%;
         right: 20%;
+    }
+}
+
+@media screen and (max-width:540px){
+    button, a{
+        font-size: 18px;
+    }
+    
+    p{
+        font-size: 18px;
+    }
+    
+    h2{
+        font-size: 25px;
+    }
+    
+    h3{
+        font-size: 22px;
     }
 }
